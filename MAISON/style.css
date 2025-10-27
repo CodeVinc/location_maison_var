@@ -1,0 +1,29 @@
+h1,
+h2 {
+    font-family: 'Great Vibes', cursive;
+    text-transform: none;
+    letter-spacing: 3px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    /* aligne verticalement le texte et l’image */
+    gap: 20px;
+    /* espace entre eux */
+}
+
+.photo {
+    width: 150px;
+    border-radius: 10px;
+}
+
+.description {
+    font-family: 'Poppins', sans-serif;
+    color: #444;
+    line-height: 1.5;
+}
