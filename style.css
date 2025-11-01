@@ -30,7 +30,7 @@ nav {
     grid-template-columns: auto auto 1fr auto;
     align-items: center;
     background: rgb(11, 24, 20);
-    color: whitesmoke;
+    color: #f5f5f5;
     padding: 1rem 2rem;
     /* ↓ permet le retour à la ligne ↓ */
     grid-template-rows: auto;
@@ -66,7 +66,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: hsl(157, 29%, 56%);
+    color: #6eaf96;
 }
 
 nav ul li:first-child a {
