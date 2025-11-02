@@ -83,4 +83,53 @@ button {
 }
 .header__menu li a:hover {
   color: #6eaf96;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: url("../../assets/image/maison/fond_ecran_villa.jpg") center/cover no-repeat;
+  padding: 2rem 1rem;
+}
+.main__title {
+  font-family: "Great Vibes", cursive;
+  font-size: 4rem;
+  text-align: center;
+  color: #f5f5f5;
+  text-transform: none;
+  letter-spacing: 3px;
+}
+.main__cadre {
+  width: 90%;
+  max-width: 900px;
+  padding: 3rem;
+  margin: 2rem auto;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+.main__cadre img {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s;
+}
+.main__cadre img:hover {
+  transform: scale(1.02);
+}
+.main__cadre--description {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #141414;
+  text-align: justify;
+  font-weight: 550;
 }/*# sourceMappingURL=style.css.map */
