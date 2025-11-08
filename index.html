@@ -39,45 +39,55 @@
         <h1 class="main__title">Bienvenue à la Villa Solazur</h1>
         <!-- boite pour texte de presentation -->
         <div class="main__cadre">
-            <p class="main__cadre--description">Un lieu unique, loin de la foule dans le centre Var à demi-chemin entre la mer
-                et
-                les gorges du Verdon. Vous
-                serez à l’abris des regards grace à la vegetation et aux murs d’enceintes de la maison. La
-                décoration de
-                ce
-                lieu est minimaliste et vous transportera dans un autre monde dès que vous passerez cette porte.
-            </p>
+            <div class="main__cadre--text">
+                <p>Un lieu unique, loin de la foule dans le centre Var à demi-chemin
+                    entre la mer
+                    et
+                    les gorges du Verdon. Vous
+                    serez à l’abris des regards grace à la vegetation et aux murs d’enceintes de la maison. La
+                    décoration de
+                    ce
+                    lieu est minimaliste et vous transportera dans un autre monde dès que vous passerez cette porte.
+                </p>
+                <a class="btn-waze" href="https://www.waze.com/ul?ll=48.8566,2.3522&navigate=yes" target="_blank">
+                    S'y rendre
+                </a>
+            </div>
             <!-- image de la porte dans la presentation de la villa  -->
             <img src="./assets/image/maison/Porteentree.jpg" alt="Porte d'entrée de la Villa Solazur">
         </div>
     </main>
 
-    <footer>
-        <div class="footer-row">
+    <footer class="footer">
+        <div class="footer__main">
             <!-- 1. Réseaux -->
-            <div id="icons">
-                <a href="http://www.twitter.fr"><i class="fa fa-twitter"></i></a>
-                <a href="http://www.facebook.fr"><i class="fa fa-facebook"></i></a>
-                <a href="http://www.instagram.com"><i class="fa fa-instagram"></i></a>
+            <div class="social">
+                <a class="social__link" href="https://twitter.com" aria-label="Twitter">
+                    <i class="social__icon fa fa-twitter"></i>
+                </a>
+                <a class="social__link" href="https://facebook.com" aria-label="Facebook">
+                    <i class="social__icon fa fa-facebook"></i>
+                </a>
+                <a class="social__link" href="https://instagram.com" aria-label="Instagram">
+                    <i class="social__icon fa fa-instagram"></i>
+                </a>
             </div>
 
-            <!-- 2. Formulaire -->
-            <form id="contact" action="" method="post">
-                <input type="text" name="nom" placeholder="Nom" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <textarea name="message" placeholder="Message" required></textarea>
-                <button type="submit">Envoyer</button>
-            </form>
+            <!-- 2. Logo -->
+            <img class="footer__logo" src="./assets/image/maison/olivier.jpg" alt="olivier">
 
-            <!-- 3. Bouton Waze -->
-            <a class="btn-waze" href="https://www.waze.com/ul?ll=48.8566,2.3522&navigate=yes" target="_blank">
-                Direction
-            </a>
+            <!-- 3. Formulaire -->
+            <form class="contact" action="" method="post">
+                <label class="contact__label" for="nom">Nom</label>
+                <input class="contact__input" type="text" name="nom" placeholder="Nom" required>
+                <label class="contact__label" for="email">Email</label>
+                <input class="contact__input" type="email" name="email" placeholder="Email" required>
+                <label class="contact__label" for="message">Votre message</label>
+                <textarea class="contact__textarea" name="message" placeholder="Message" required></textarea>
+                <button class="contact__submit" type="submit">Envoyer</button>
+            </form>
         </div>
 
-        <!-- Droits réservés en dessous -->
-        <p class="droits">© 2024 Villa Solazur. Tous droits réservés.</p>
-    </footer>>
-</body>
-
-</html>
+        <!-- 4. Droits -->
+        <p class="footer__copyright">© 2024 Villa Solazur. Tous droits réservés.</p>
+    </footer>

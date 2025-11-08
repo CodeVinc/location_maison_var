@@ -8,7 +8,7 @@
     background: url("../../assets/image/maison/fond_ecran_villa.jpg") center/cover no-repeat;
     padding: 2rem 1rem;
 
-    
+
 
     &__title {
         font-family: utils.$font-title;
@@ -34,7 +34,7 @@
         justify-content: space-around;
         align-items: center;
         gap: 2rem;
-    
+
 
         & img {
             width: 50%;
@@ -48,12 +48,30 @@
             }
         }
 
-        &--description {
+        &--text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
             font-size: 1.05rem;
             line-height: 1.6;
             color: utils.$neutral-900;
             text-align: justify;
             font-weight: 550;
+
+            & a {
+                background-color: utils.$primary;
+                color: utils.$neutral-100;
+                padding: 0.5rem 1rem;
+                border-radius: 10px;
+                font-weight: bold;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: utils.$secondary;
+                }
+            }
         }
 
     }
