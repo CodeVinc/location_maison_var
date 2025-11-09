@@ -1,117 +1,116 @@
-@use '../utils/main.scss' as *;
+@use '../utils/main.scss' as utils;
 
 /* ---------- FOOTER ---------- */
 .footer {
-    background:utils.$primary;
-    color: $neutral-100;
-    padding: 1rem 1rem 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    font-size: 0.95rem;
-}
-
-/* ---------- LIGNE PRINCIPALE ---------- */
-.footer__main {
+  background: utils.$primary;
+  color: utils.$neutral-100;
+  padding: 1rem 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.95rem;
+  &__main {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-
-    /* 3 zones égales */
-    >* {
-        flex: 1 1 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* taille mini du formulaire */
-    .contact {
-        flex: 1 1 320px;
-    }
-
-    /* logo */
-    .footer__logo {
-        max-height: 80px;
-        object-fit: cover;
-        border-radius: 50%;
-    }
-
-    /* mobile */
-    @media (max-width: 768px) {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-/* ---------- RÉSEAUX ---------- */
-.social {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* réseaux | logo | formulaire */
+    align-items: center; /* centrage vertical */
+    justify-items: center; /* centrage horizontal ds chaque colonne */
+    gap: 2rem;
+    padding: 1rem 0;
+  }
+  /* ---------- RÉSEAUX ---------- */
+  &__image {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  &__social {
     display: flex;
     gap: 5rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-left: 1rem;
 
-    &__link {
-        color: whitesmoke;
-        transition: color 0.3s, transform 0.2s;
+    &--link {
+      color: whitesmoke;
+      transition: color 0.3s, transform 0.2s;
 
-        &:hover {
-            color: hsl(157, 29%, 56%);
-            transform: scale(1.15);
-        }
+      &:hover {
+        color: hsl(157, 29%, 56%);
+        transform: scale(1.15);
+      }
     }
-}
+  }
+  /* ---------- FORMULAIRE ---------- */
+  &__contact {
+    display: grid;
+    grid-template-columns: 120px 1fr 100px 1fr;
+    gap: 1rem 1.5rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 
-/* ---------- FORMULAIRE ---------- */
-.contact {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.3rem 0.8rem;
-    justify-content: center;
-    align-items: center;
-
-    &__input,
-    &__textarea {
-        flex: 1 1 120px;
-        padding: 0.4rem 0.6rem;
-        border: none;
-        border-radius: 6px;
-        font-size: 0.85rem;
-        background: #222;
-        color: #fff;
-        transition: background 0.3s;
-
-        &:focus {
-            background: hsl(157, 29%, 56%);
-            outline: none;
-        }
+    &--label {
+      text-align: right;
+      align-self: center;
+      font-weight: 500;
+      color: utils.$neutral-100;
     }
 
-    &__submit {
-        padding: 0.4rem 1rem;
-        border: none;
-        border-radius: 6px;
-        background: #fff;
-        color: #000;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background 0.3s, transform 0.2s;
+    &--input,
+    &--textarea {
+      padding: 0.6rem 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border-color 0.2s;
 
-        &:hover {
-            background:  hsl(157, 29%, 56%);
-            transform: translateY(-2px);
-        }
+      &:focus {
+        outline: none;
+        border: 3px solid utils.$secondary;
+        box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2);
+      }
     }
-}
 
-/* ---------- DROITS ---------- */
-.footer__copyright {
+    /* La textarea occupe toute la ligne */
+    &--textarea {
+      grid-column: 1 / 5;
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    /* Le bouton aussi */
+    &--submit {
+      grid-column: 1 / 5;
+      justify-self: start; // change en "center" ou "end" si tu veux
+      padding: 0.6rem 1.2rem;
+      background: utils.$secondary;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+
+      &:hover {
+        background: darken(utils.$secondary, 10%);
+      }
+    }
+  }
+
+  /* ---------- DROITS ---------- */
+  &__copyright {
     margin-top: 0.5rem;
     font-size: 0.8rem;
     opacity: 0.7;
     text-align: center;
+  }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
 }

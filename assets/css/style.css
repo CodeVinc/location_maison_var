@@ -86,7 +86,7 @@ button {
 }
 
 /* ---------- FOOTER ---------- */
-footer {
+.footer {
   background: #0b1814;
   color: #f5f5f5;
   padding: 1rem 1rem 0.5rem;
@@ -96,94 +96,86 @@ footer {
   align-items: center;
   gap: 1rem;
   font-size: 0.95rem;
+  /* ---------- RÉSEAUX ---------- */
+  /* ---------- FORMULAIRE ---------- */
+  /* ---------- DROITS ---------- */
 }
-
-/* ---------- LIGNE PRINCIPALE ---------- */
 .footer__main {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-  /* 3 zones égales */
-  /* taille mini du formulaire */
-  /* logo */
-  /* mobile */
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* réseaux | logo | formulaire */
+  align-items: center; /* centrage vertical */
+  justify-items: center; /* centrage horizontal ds chaque colonne */
+  gap: 2rem;
+  padding: 1rem 0;
 }
-.footer__main > * {
-  flex: 1 1 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.footer__image {
+  width: 5rem;
+  height: 5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
 }
-.footer__main .contact {
-  flex: 1 1 320px;
-}
-.footer__main .footer__logo {
-  max-height: 80px;
-  object-fit: contain;
-}
-@media (max-width: 768px) {
-  .footer__main {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-/* ---------- RÉSEAUX ---------- */
-.social {
+.footer__social {
   display: flex;
   gap: 5rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  margin-left: 1rem;
 }
-.social__link {
+.footer__social--link {
   color: whitesmoke;
   transition: color 0.3s, transform 0.2s;
 }
-.social__link:hover {
+.footer__social--link:hover {
   color: hsl(157, 29%, 56%);
   transform: scale(1.15);
 }
-
-/* ---------- FORMULAIRE ---------- */
-.contact {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem 0.8rem;
-  justify-content: center;
-  align-items: center;
+.footer__contact {
+  display: grid;
+  grid-template-columns: 120px 1fr 100px 1fr;
+  gap: 1rem 1.5rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  /* La textarea occupe toute la ligne */
+  /* Le bouton aussi */
 }
-.contact__input, .contact__textarea {
-  flex: 1 1 120px;
-  padding: 0.4rem 0.6rem;
-  border: none;
+.footer__contact--label {
+  text-align: right;
+  align-self: center;
+  font-weight: 500;
+  color: #f5f5f5;
+}
+.footer__contact--input, .footer__contact--textarea {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 0.85rem;
-  background: #222;
-  color: #fff;
-  transition: background 0.3s;
+  font-size: 1rem;
+  transition: border-color 0.2s;
 }
-.contact__input:focus, .contact__textarea:focus {
-  background: hsl(157, 29%, 56%);
+.footer__contact--input:focus, .footer__contact--textarea:focus {
   outline: none;
+  border: 3px solid #6eaf96;
+  box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2);
 }
-.contact__submit {
-  padding: 0.4rem 1rem;
+.footer__contact--textarea {
+  grid-column: 1/5;
+  resize: vertical;
+  min-height: 100px;
+}
+.footer__contact--submit {
+  grid-column: 1/5;
+  justify-self: start;
+  padding: 0.6rem 1.2rem;
+  background: #6eaf96;
+  color: #fff;
   border: none;
   border-radius: 6px;
-  background: #fff;
-  color: #000;
-  font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
 }
-.contact__submit:hover {
-  background: hsl(157, 29%, 56%);
-  transform: translateY(-2px);
+.footer__contact--submit:hover {
+  background: rgb(83.2, 150.8, 124.8);
 }
-
-/* ---------- DROITS ---------- */
 .footer__copyright {
   margin-top: 0.5rem;
   font-size: 0.8rem;
@@ -191,6 +183,13 @@ footer {
   text-align: center;
 }
 
+/* mobile */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 .main {
   display: flex;
   flex-direction: column;
@@ -214,7 +213,8 @@ footer {
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.08);
   border-radius: 12px;
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: row;
@@ -254,4 +254,4 @@ footer {
 }
 .main__cadre--text a:hover {
   color: #6eaf96;
-}/*# sourceMappingURL=style.css.map */
+}

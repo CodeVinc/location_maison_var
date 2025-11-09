@@ -1,93 +1,144 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
 
     <!-- titre de la page -->
     <title>Villa Solazur</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header">
-
-        <div class="header__brand-site">
-            <img class="header__brand-site--logo" src="./assets/image/maison/olivier.jpg" alt="olivier">
-            <p class="header__brand-site--title">Villa Solazur</p>
-        </div>
-        <nav>
-            <!-- titre de mon menu -->
-            <!-- liste de mon menu -->
-            <ul class="header__menu">
-                <li><a href="accueil.html">Accueil</a></li>
-                <li><a href="./pages/hebergement.html">Hébergement</a></li>
-                <li><a href="./pages/tourisme.html">Tourisme</a></li>
-                <li><a href="./pages/réservation.html">Réservation</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-
-
+      <div class="header__brand-site">
+        <img
+          class="header__brand-site--logo"
+          src="./assets/image/maison/olivier.jpg"
+          alt="olivier"
+        />
+        <p class="header__brand-site--title">Villa Solazur</p>
+      </div>
+      <nav>
+        <!-- titre de mon menu -->
+        <!-- liste de mon menu -->
+        <ul class="header__menu">
+          <li><a href="accueil.html">Accueil</a></li>
+          <li><a href="./pages/hebergement.html">Hébergement</a></li>
+          <li><a href="./pages/tourisme.html">Tourisme</a></li>
+          <li><a href="./pages/réservation.html">Réservation</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
-
     <main class="main">
-        <!-- titre principale -->
-        <h1 class="main__title">Bienvenue à la Villa Solazur</h1>
-        <!-- boite pour texte de presentation -->
-        <div class="main__cadre">
-            <div class="main__cadre--text">
-                <p>Un lieu unique, loin de la foule dans le centre Var à demi-chemin
-                    entre la mer
-                    et
-                    les gorges du Verdon. Vous
-                    serez à l’abris des regards grace à la vegetation et aux murs d’enceintes de la maison. La
-                    décoration de
-                    ce
-                    lieu est minimaliste et vous transportera dans un autre monde dès que vous passerez cette porte.
-                </p>
-                <a class="btn-waze" href="https://www.waze.com/ul?ll=48.8566,2.3522&navigate=yes" target="_blank">
-                    S'y rendre
-                </a>
-            </div>
-            <!-- image de la porte dans la presentation de la villa  -->
-            <img src="./assets/image/maison/Porteentree.jpg" alt="Porte d'entrée de la Villa Solazur">
+      <!-- titre principale -->
+      <h1 class="main__title">Bienvenue à la Villa Solazur</h1>
+      <!-- boite pour texte de presentation -->
+      <div class="main__cadre">
+        <div class="main__cadre--text">
+          <p>
+            Un lieu unique, loin de la foule dans le centre Var à demi-chemin
+            entre la mer et les gorges du Verdon. Vous serez à l’abris des
+            regards grace à la vegetation et aux murs d’enceintes de la maison.
+            La décoration de ce lieu est minimaliste et vous transportera dans
+            un autre monde dès que vous passerez cette porte.
+          </p>
+          <a
+            class="btn-waze"
+            href="https://www.waze.com/ul?ll=48.8566,2.3522&navigate=yes"
+            target="_blank"
+          >
+            S'y rendre
+          </a>
         </div>
+        <!-- image de la porte dans la presentation de la villa  -->
+        <img
+          src="./assets/image/maison/Porteentree.jpg"
+          alt="Porte d'entrée de la Villa Solazur"
+        />
+      </div>
     </main>
 
     <footer class="footer">
-        <div class="footer__main">
-            <!-- 1. Réseaux -->
-            <div class="social">
-                <a class="social__link" href="https://twitter.com" aria-label="Twitter">
-                    <i class="social__icon fa fa-twitter"></i>
-                </a>
-                <a class="social__link" href="https://facebook.com" aria-label="Facebook">
-                    <i class="social__icon fa fa-facebook"></i>
-                </a>
-                <a class="social__link" href="https://instagram.com" aria-label="Instagram">
-                    <i class="social__icon fa fa-instagram"></i>
-                </a>
-            </div>
-
-            <!-- 2. Logo -->
-            <img class="footer__logo" src="./assets/image/maison/olivier.jpg" alt="olivier">
-
-            <!-- 3. Formulaire -->
-            <form class="contact" action="" method="post">
-                <label class="contact__label" for="nom">Nom</label>
-                <input class="contact__input" type="text" name="nom" placeholder="Nom" required>
-                <label class="contact__label" for="email">Email</label>
-                <input class="contact__input" type="email" name="email" placeholder="Email" required>
-                <label class="contact__label" for="message">Votre message</label>
-                <textarea class="contact__textarea" name="message" placeholder="Message" required></textarea>
-                <button class="contact__submit" type="submit">Envoyer</button>
-            </form>
+      <div class="footer__main">
+        <div class="footer__social">
+          <a
+            class="footer__social--link"
+            href="https://twitter.com"
+            aria-label="Twitter"
+          >
+            <i class="footer__social--icon fa fa-twitter"></i>
+          </a>
+          <a
+            class="footer__social--link"
+            href="https://facebook.com"
+            aria-label="Facebook"
+          >
+            <i class="footer__social--icon fa fa-facebook"></i>
+          </a>
+          <a
+            class="footer__social--link"
+            href="https://instagram.com"
+            aria-label="Instagram"
+          >
+            <i class="footer__social--icon fa fa-instagram"></i>
+          </a>
         </div>
 
-        <!-- 4. Droits -->
-        <p class="footer__copyright">© 2024 Villa Solazur. Tous droits réservés.</p>
+        <!-- 2. Logo -->
+        <img
+          class="footer__image"
+          src="./assets/image/maison/olivier.jpg"
+          alt="olivier"
+        />
+
+        <!-- 3. Formulaire -->
+        <form class="footer__contact" action="" method="post">
+          <label class="footer__contact--label" for="nom">Nom</label>
+          <input
+            class="footer__contact--input"
+            type="text"
+            id="nom"
+            name="nom"
+            placeholder="Nom"
+            required
+          />
+
+          <label class="footer__contact--label" for="email">Email</label>
+          <input
+            class="footer__contact--input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+
+          <label class="footer__contact--label" for="message"
+            >Votre message</label
+          >
+          <textarea
+            class="footer__contact--textarea"
+            id="message"
+            name="message"
+            placeholder="Message"
+            required
+          ></textarea>
+
+          <button class="footer__contact--submit" type="submit">Envoyer</button>
+        </form>
+      </div>
+
+      <!-- 4. Droits -->
+      <p class="footer__copyright">
+        © 2024 Villa Solazur. Tous droits réservés.
+      </p>
     </footer>
+  </body>
+</html>
