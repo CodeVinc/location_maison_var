@@ -89,40 +89,42 @@ button {
 .footer {
   background: #0b1814;
   color: #f5f5f5;
-  padding: 1rem 1rem 0.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
+  padding: 1rem 2rem;
   /* ---------- RÉSEAUX ---------- */
-  /* ---------- FORMULAIRE ---------- */
-  /* ---------- DROITS ---------- */
 }
 .footer__main {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr auto 1fr; /* réseaux | logo | formulaire */
-  align-items: center; /* centrage vertical */
-  justify-items: center; /* centrage horizontal ds chaque colonne */
-  gap: 2rem;
-  padding: 1rem 0;
+  grid-template-columns: 1fr auto 1fr;
+  /* réseaux | logo | formulaire */
+  align-items: center;
+  /* centrage vertical */
+  justify-items: center;
+  /* centrage horizontal ds chaque colonne */
+  gap: 1rem;
+  padding: 0.25rem 0;
 }
 .footer__image {
-  width: 5rem;
-  height: 5rem;
+  width: 50px;
+  height: 50px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
 }
 .footer__social {
   display: flex;
-  gap: 5rem;
-  font-size: 2rem;
-  margin-left: 1rem;
+  gap: 1.5rem;
+  font-size: 1.4rem;
+  margin-left: 0.5rem;
+  justify-self: end;
 }
 .footer__social--link {
+  text-align: right;
   color: whitesmoke;
   transition: color 0.3s, transform 0.2s;
 }
@@ -130,59 +132,14 @@ button {
   color: hsl(157, 29%, 56%);
   transform: scale(1.15);
 }
-.footer__contact {
-  display: grid;
-  grid-template-columns: 120px 1fr 100px 1fr;
-  gap: 1rem 1.5rem;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  /* La textarea occupe toute la ligne */
-  /* Le bouton aussi */
-}
-.footer__contact--label {
-  text-align: right;
-  align-self: center;
-  font-weight: 500;
-  color: #f5f5f5;
-}
-.footer__contact--input, .footer__contact--textarea {
-  padding: 0.6rem 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  transition: border-color 0.2s;
-}
-.footer__contact--input:focus, .footer__contact--textarea:focus {
-  outline: none;
-  border: 3px solid #6eaf96;
-  box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2);
-}
-.footer__contact--textarea {
-  grid-column: 1/5;
-  resize: vertical;
-  min-height: 100px;
-}
-.footer__contact--submit {
-  grid-column: 1/5;
-  justify-self: start;
-  padding: 0.6rem 1.2rem;
-  background: #6eaf96;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-.footer__contact--submit:hover {
-  background: rgb(83.2, 150.8, 124.8);
-}
 .footer__copyright {
-  margin-top: 0.5rem;
-  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  font-size: 0.7rem;
   opacity: 0.7;
-  text-align: center;
+  justify-self: start;
 }
 
+/* ---------- DROITS ---------- */
 /* mobile */
 @media (max-width: 768px) {
   .footer {
@@ -190,6 +147,12 @@ button {
     text-align: center;
   }
 }
+.body {
+  display: grid;
+  align-items: center;
+  background-color: #0b1814;
+}
+
 .main {
   display: flex;
   flex-direction: column;

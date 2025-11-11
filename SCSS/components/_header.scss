@@ -2,58 +2,55 @@
 
 //TODO faire une mixin pour les flexbox
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: utils.$primary;
+  color: utils.$neutral-100;
+  padding: 1rem 2rem;
+  /* ↓ permet le retour à la ligne ↓ */
+  grid-template-rows: auto;
+  min-height: 44px;
+
+  &__brand-site {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
-    background: utils.$primary;
-    color: utils.$neutral-100;
-    padding: 1rem 2rem;
-    /* ↓ permet le retour à la ligne ↓ */
-    grid-template-rows: auto;
-    min-height: 44px;
+    gap: 2rem;
 
-    &__brand-site {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 2rem;
-
-        &--logo {
-            width: 50px;
-            border-radius: 50%;
-        }
-
-        &--title {
-            font-family: utils.$font-title;
-            font-weight: bold;
-            font-size: 3rem;
-        }
+    &--logo {
+      width: 50px;
+      border-radius: 50%;
     }
 
-    &__menu {
-
-        display: flex;
-        flex-wrap: wrap;
-        /* ← multiligne si besoin */
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        /* espace entre liens */
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        height: auto;
-
-        & li a {
-            color: utils.$neutral-100;
-            font-weight: 500;
-            transition: color 0.3s;
-
-            &:hover {
-                color: utils.$secondary;
-            }
-        }
+    &--title {
+      font-family: utils.$font-title;
+      font-weight: bold;
+      font-size: 3rem;
     }
+  }
 
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+    /* ← multiligne si besoin */
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    /* espace entre liens */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: auto;
 
+    & li a {
+      color: utils.$neutral-100;
+      font-weight: 500;
+      transition: color 0.3s;
+
+      &:hover {
+        color: utils.$secondary;
+      }
+    }
+  }
 }

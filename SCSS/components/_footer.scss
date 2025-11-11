@@ -4,13 +4,12 @@
 .footer {
   background: utils.$primary;
   color: utils.$neutral-100;
-  padding: 0.5rem 0.75rem 0.25rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
   font-size: 0.85rem;
+  padding: 1rem 2rem;
 
   &__main {
     width: 100%;
@@ -27,8 +26,8 @@
 
   /* ---------- RÉSEAUX ---------- */
   &__image {
-    width: 4rem;
-    height: 4rem;
+    width: 50px;
+    height: 50px;
     object-fit: cover;
     border-radius: 50%;
   }
@@ -38,8 +37,10 @@
     gap: 1.5rem;
     font-size: 1.4rem;
     margin-left: 0.5rem;
+    justify-self: end;
 
     &--link {
+      text-align: right;
       color: whitesmoke;
       transition: color 0.3s, transform 0.2s;
 
@@ -49,16 +50,15 @@
       }
     }
   }
+  &__copyright {
+    margin-top: 0.2rem;
+    font-size: 0.7rem;
+    opacity: 0.7;
+    justify-self: start;
+  }
 }
 
 /* ---------- DROITS ---------- */
-&__copyright {
-  margin-top: 0.2rem;
-  font-size: 0.7rem;
-  opacity: 0.7;
-  text-align: center;
-}
-
 
 /* mobile */
 @media (max-width: 768px) {
